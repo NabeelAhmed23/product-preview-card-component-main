@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+}
+h1,
+h2,
+h3 {
+  font-family: "Fraunces";
+}
+
+.card-wrapper {
+  background-color: hsl(30, 38%, 92%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 340px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card-picture {
+  width: 100%;
+  display: flex;
+}
+
+.card-right {
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.perfume-title {
+  font-weight: 200;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+}
+
+.perfume-name {
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.perfume-description {
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  margin-top: 0.75rem;
+  color: white;
+  font-weight: 700;
+  background-color: hsl(158, 36%, 37%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.add-to-cart-button:hover {
+  background-color: #2b5e4c;
+}
+.perfume-price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.perfume-price-big {
+  color: hsl(158, 36%, 37%);
+  font-size: 32px;
+}
+
+.perfume-price-small {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+@media (min-width: 768px) {
+  .card-wrapper {
+    height: 100vh;
+  }
+  .card {
+    max-width: 650px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+  }
+  .perfume-name {
+    line-height: 1;
+    font-size: 36px;
+  }
+  .perfume-description {
+    padding-right: 1rem;
+  }
+}
